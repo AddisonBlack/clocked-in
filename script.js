@@ -78,6 +78,7 @@ function update() {
   }
 
   display.textContent = `${hours}:${minutes}:${seconds}`;
+  document.title = `${hours}:${minutes}:${seconds}`;
   updateProgressBar();
 
   if (hours === "08" && minutes === "00" && seconds === "00" && !confettiTriggered) {
