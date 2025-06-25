@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to right,#0093e9, #000000);
+  background: linear-gradient(to right, #000000, #000000);
   background-size: 600% 600%;
   animation: gradientMove 60s ease infinite;
   min-height: 100vh;
@@ -145,17 +145,6 @@ body {
   }
 }
 
-/* @keyframes fadeOutSlide {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-} */
-
 .ocean:hover {
   background: linear-gradient(to right,#0093e9, #000000);
   cursor: pointer;
@@ -177,7 +166,12 @@ body {
 }
 
 .arctic:hover {
-  background: linear-gradient(to right, #4dd0e1, #000000);
+  background: linear-gradient(to right, #4dd0e1, #000000, #8086a4);
+  cursor: pointer;
+}
+
+.midnight:hover {
+  background: linear-gradient(to right,#000000);
   cursor: pointer;
 }
 
@@ -253,7 +247,7 @@ body {
 }
 
 @keyframes pulse-green {
-  0%   { background-color: rgba(127, 255, 212, 0.3); } /* aquamarine with low opacity */
+  0%   { background-color: rgba(127, 255, 212, 0.3); }
   50%  { background-color: rgba(127, 255, 212, 0.15); }
   100% { background-color: transparent; }
 }
@@ -367,7 +361,7 @@ input {
     opacity: 1;
   }
   100% {
-    /* Fall down after burst */
+
     transform: translate(calc(var(--x-offset) * 1vw), calc(var(--y-offset) * 1vh + 20vh)) rotate(calc(720deg * var(--rotate-direction)));
     opacity: 0;
   }
