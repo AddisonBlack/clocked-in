@@ -181,6 +181,7 @@ const themeColors = {
   desert: ["#C9B194", "#D9A066", "#E6BE8A"],
   sunset: ["#FF6B2D", "#FF3E6C", "#A155B9"],
   arctic: ["#4dd0e1", "#a0e9f0", "#ffffff"],
+  midnight: ["#8086a4"], 
   default: ["#ffffff"]
 };
 
@@ -189,6 +190,8 @@ document.querySelector(".forest").addEventListener("click", forestTheme);
 document.querySelector(".desert").addEventListener("click", desertTheme);
 document.querySelector(".sunset").addEventListener("click", sunsetTheme);
 document.querySelector(".arctic").addEventListener("click", arcticTheme);
+document.querySelector(".midnight").addEventListener("click", midnightTheme);
+
 
 function setTheme(name, gradient) {
   const body = document.querySelector("body");
@@ -220,6 +223,10 @@ function sunsetTheme() {
 
 function arcticTheme() {
   setTheme("arctic", "linear-gradient(to right, #4dd0e1, #000000)");
+}
+
+function midnightTheme() {
+  setTheme("midnight", "linear-gradient(to right, #000000)");
 }
 
 // Local Storage
@@ -271,6 +278,9 @@ function loadTheme() {
       break;
     case "arctic":
       arcticTheme();
+      break;
+    case "midnight":
+      midnightTheme();
       break;
   }
 }
